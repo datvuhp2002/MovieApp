@@ -1,0 +1,52 @@
+.wrapper{
+    width: 100%;
+    height: 5.6rem;
+    display: flex;
+    color: red;
+    align-items: center;
+    // position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    a{
+        display:flex;
+        align-items: center;
+    }
+    .Menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .btn-list{
+            display: flex;
+        }
+    }
+}
+.logo{
+    width: 112px;
+    height: 28px;
+    min-height: 32.5px;
+}
+.Menu{
+    height: 100%;
+    .btn-list{
+        height: 100%;
+        align-items: center;
+        a{
+            height: 100%;
+        }
+    }
+}
+.user{
+    display: flex;
+    p{
+        margin-right: 5px;
+    }
+}
+.actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .UserInsign{
+        height: 100%;
+    }
+}

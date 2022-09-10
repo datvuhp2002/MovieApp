@@ -1,0 +1,116 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    // align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-width: 100px;
+    border-radius: 4px;
+    padding: 8px 12px;  
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: var(--white);
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    + .wrapper{
+        // margin-left: 8px; 
+    }
+    &.disabled{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    &.primaryHeader {
+        color: var(--white);
+        padding: 7px 16px;
+    }
+    
+
+}
+.rounded{
+    color: rgba(22, 24, 35, 0.75);
+    border-radius: 999px;
+    border-color:  rgba(22, 24, 35, 0.12);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    &:hover{
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.primary{
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    &:hover{
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55
+    }
+}
+.primaryHeader{
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    padding: 0;
+    &:hover{
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55
+    }
+}
+.header{
+    height: 100%;
+    background-color: transparent;
+    color: var(--white)!important;
+    align-items: center;
+    border: 0;
+    &:hover{
+        background-color: #102c48;
+        color: #428bca;
+    }
+}
+.menu{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    color: var(--white);
+    background-color: transparent;
+    &:hover{
+        background-color: #f5f5f5;
+        color: #0a0a0a;
+
+    }
+}
+.outline{
+    background-color: var(--white);
+    border-color: currentColor ;
+    color: var(--primary);
+    min-width: 8.8rem;
+    &:hover{
+        border-color: currentColor ;
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+
+}
+.Icon + .title, .title + .Icon{
+    margin-left: 8px;
+} 
+.Icon{
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+}
+.text{
+    &:hover{text-decoration: underline;}
+}
+
+
+
+// small 
+.small{
+    min-width: 8.8rem;
+    padding: 4px 16px;
+}
+// large
+.large{
+    min-width: 14.8rem;
+    padding: 14px 16px; 
+}
