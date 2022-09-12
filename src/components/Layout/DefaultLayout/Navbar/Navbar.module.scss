@@ -16,9 +16,6 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        .btn-list{
-            display: flex;
-        }
     }
 }
 .logo{
@@ -34,19 +31,5 @@
         a{
             height: 100%;
         }
-    }
-}
-.user{
-    display: flex;
-    p{
-        margin-right: 5px;
-    }
-}
-.actions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .UserInsign{
-        height: 100%;
     }
 }

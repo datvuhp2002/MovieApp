@@ -1,5 +1,5 @@
 import React from "react";
-
+import DefaultLayout from "../../components/Layout/DefaultLayout";
 export default function NewMovie() {
-  return <div>NewMovie pages</div>;
+  return <DefaultLayout></DefaultLayout>;
 }

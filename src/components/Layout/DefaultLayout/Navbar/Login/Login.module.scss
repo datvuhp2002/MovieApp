@@ -1,0 +1,22 @@
+
+.actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .UserInsign{
+        height: 100%;
+        background-color: transparent ;
+    }
+    &:hover .UserInsign
+        {
+            background-color: #102c48;
+    
+        }
+    
+}
+.user{
+    display: flex;
+    p{
+        margin-right: 5px;
+    }
+}

@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const cx = classNames.bind(styles);
 export default function Menu(items) {
-  const dataArray = Object.entries(items);
   const [database, setdatabase] = useState(items.items);
   console.log("Database", database);
   const renderItems = () => {

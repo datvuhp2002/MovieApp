@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 export default function Home() {
   return (
     <div className={cx("Home")}>
-      <DefaultLayout />
+      <DefaultLayout></DefaultLayout>
     </div>
   );
 }
