@@ -16,7 +16,15 @@
 }
 .user{
     display: flex;
+    justify-content: center;
+    align-items: center;
     p{
         margin-right: 5px;
+    }
+    svg{
+        color: #428bca;
+        // width: 0.7rem;
+        // height: 0.7rem;
+        font-size: 1.25rem;
     }
 }

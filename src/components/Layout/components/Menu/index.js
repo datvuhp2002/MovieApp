@@ -7,10 +7,8 @@ import { useState } from "react";
 const cx = classNames.bind(styles);
 export default function Menu(items) {
   const [database, setdatabase] = useState(items.items);
-  console.log("Database", database);
   const renderItems = () => {
     return database.map((item, index) => {
-      console.log("item: ", item);
       return <MenuItems key={index} data={item} />;
     });
   };

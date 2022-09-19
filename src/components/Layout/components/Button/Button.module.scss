@@ -46,6 +46,21 @@
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55
     }
 }
+.contact{
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #071334;
+    width: 3em;
+    height: 3em;
+    border-radius: 5px 20px 5px;    
+    border: 1px solid hsla(0,0%,100%,.36);
+    &:hover{
+        background: #2f0a61;
+    }
+}
 .primaryHeader{
     background-color: var(--primary);
     color: var(--white);
@@ -61,6 +76,8 @@
     background-color: transparent;
     color: var(--white)!important;
     align-items: center;
+    font-weight: 300;
+    
     border: 0;
     &:hover{
         background-color: #102c48;
@@ -101,7 +118,6 @@
 .text{
     &:hover{text-decoration: underline;}
 }
-
 
 
 // small 

@@ -22,7 +22,7 @@ export default function Login(data) {
     );
   });
   let [listData, setListData] = useState(data.data);
-  let currentUser = false;
+  let currentUser = true;
   return (
     <div className={cx("actions")}>
       {currentUser ? (

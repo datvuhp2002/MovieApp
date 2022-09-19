@@ -1,11 +1,10 @@
 import React, { forwardRef } from "react";
+import { Navbar as NavbarWeb } from "react-bootstrap";
 import classNames from "classnames/bind";
-import styles from "./Navbar.module.scss";
 import LogoApp from "../../../../asstes/images/LogoApp.png";
 import { Image, Menu } from "../../components";
 import {
   faArrowRightFromBracket,
-  faChevronDown,
   faDonate,
   faEarthAmerica,
   faFilm,
@@ -15,8 +14,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import MenuItems from "./MenuItems";
 import Login from "./Login";
+import useScrollY from "../../../Hooks/useScrollY";
+import styles from "./Navbar.module.scss";
+
 const cx = classNames.bind(styles);
 export default function Navbar(props) {
+  const scrollY = useScrollY();
   const listItemHeader = [
     { icon: <FontAwesomeIcon icon={faUser} />, title: "Account" },
     { icon: <FontAwesomeIcon icon={faDonate} />, title: "Donate" },
@@ -29,7 +32,15 @@ export default function Navbar(props) {
   ];
 
   return (
-    <div className={cx("wrapper")}>
+    <NavbarWeb
+      sticky="top"
+      className={cx("wrapper")}
+      style={
+        scrollY < 70
+          ? { backgroundColor: "transparent" }
+          : { backgroundColor: "rgba(51,10,103,.93)" }
+      }
+    >
       <Link to="/#">
         <Image src={LogoApp} className={cx("logo")}></Image>
       </Link>
@@ -37,6 +48,6 @@ export default function Navbar(props) {
         <MenuItems />
         <Login data={listItemHeader} />
       </div>
-    </div>
+    </NavbarWeb>
   );
 }
