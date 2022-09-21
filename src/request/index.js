@@ -2,7 +2,7 @@ const API_KEY = "9195c13a37c697961a3f6920c92c27f0";
 const BASE_URL = "https://api.themoviedb.org/3";
 // const request = {
 //   fecthTrending: `https://api.themoviedb.org/3/trending/all/week?api_key=${API_Key}`,
-
+// https://api.themoviedb.org/3/trending/all/week?api_key=9195c13a37c697961a3f6920c92c27f0
 // };
 const requests = {
   fetchTrending: `${BASE_URL}/trending/all/week?api_key=${API_KEY}&language=en-US`,

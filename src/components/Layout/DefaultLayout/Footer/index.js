@@ -64,7 +64,7 @@ export default function Footer() {
             class="layout_social__2PR5b"
             title="Telegram Channel"
           ></a> */}
-          <Button contact Link="./contact">
+          <Button contact href="mailto:datvuhp2002@gmail.com">
             <FontAwesomeIcon icon={faEnvelope} />
           </Button>
           <Button contact href="https://www.facebook.com/Xemphim.Original">
