@@ -1,0 +1,38 @@
+.modalW{
+    border-radius: 25px;
+    width: calc(var(--bs-modal-width) + 250px )!important;
+    max-width: none!important;
+    
+}
+.modal-content{
+    border: 0!important;
+    width: 150%!important;
+    position: relative;
+}
+.modal-header{
+    flex-direction: row;
+    position: relative;
+    border: 0!important;
+}
+.modal-header div{
+    background: linear-gradient(0deg,#181818,transparent 50%);
+    height: 7.5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    
+}
+.modal-body div h1{
+    font-size: 3.5rem;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.modal-body{
+    background-color: #181818;
+}

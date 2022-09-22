@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function useAxios(request) {
+export default function UseAxios(request) {
   const [Movie, setMovies] = useState([]);
 
   useEffect(() => {

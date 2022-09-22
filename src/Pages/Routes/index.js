@@ -7,6 +7,7 @@ import Movies from "../Movies";
 import NewMovie from "../NewMovie";
 import SeriesMovie from "../SeriesMovie";
 import Login from "../Login";
+import Detail from "../Detail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const publicRoutes = [
@@ -23,6 +24,7 @@ const publicRoutes = [
   { path: "/NewMovie", component: NewMovie, namePage: "New Movie" },
   { path: "/FAQ", component: FAQ, namePage: "FAQ" },
   { path: "/Login", component: Login },
+  { path: "/Detail/:idMovie", component: Detail },
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };

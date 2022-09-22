@@ -24,6 +24,9 @@
         color: var(--white);
         padding: 7px 16px;
     }
+    &.trailer{
+        padding: 6px 8px;
+    }
     
 
 }
@@ -38,6 +41,15 @@
     }
 }
 .primary{
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    &:hover{
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55
+    }
+}
+.trailer{
     background-color: var(--primary);
     color: var(--white);
     border-color: var(--primary);

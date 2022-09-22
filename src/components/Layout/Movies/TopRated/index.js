@@ -1,12 +1,12 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "../global.module.scss";
-import useAxios from "../../../../request/useAxios";
+import UseAxios from "../../../../request/UseAxios";
 import requests from "../../../../request";
 import { MovieCard } from "../../components";
 const cx = classNames.bind(styles);
 export default function TopRated() {
-  const top_rated = useAxios(requests.fetchTopRated);
+  const top_rated = UseAxios(requests.fetchTopRated);
   return (
     <>
       <h2 className={cx("title")}>

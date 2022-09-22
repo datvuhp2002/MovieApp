@@ -8,6 +8,7 @@ export default function Button({
   href,
   ref,
   primary = false,
+  trailer = false,
   contact = false,
   primaryHeader = false,
   outline = false,
@@ -46,6 +47,7 @@ export default function Button({
   const classes = cx("wrapper", {
     primary,
     primaryHeader,
+    trailer,
     contact,
     outline,
     menu,

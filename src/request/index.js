@@ -1,5 +1,8 @@
-const API_KEY = "9195c13a37c697961a3f6920c92c27f0";
-const BASE_URL = "https://api.themoviedb.org/3";
+export const API_KEY = "9195c13a37c697961a3f6920c92c27f0";
+export const BASE_URL = "https://api.themoviedb.org/3";
+export const Poster = "https://image.tmdb.org/t/p/original/";
+export const Poster_W500 = "https://image.tmdb.org/t/p/w500/";
+
 // const request = {
 //   fecthTrending: `https://api.themoviedb.org/3/trending/all/week?api_key=${API_Key}`,
 // https://api.themoviedb.org/3/trending/all/week?api_key=9195c13a37c697961a3f6920c92c27f0
