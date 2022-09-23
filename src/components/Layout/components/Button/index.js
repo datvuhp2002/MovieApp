@@ -1,13 +1,14 @@
 import React from "react";
 import classNames from "classnames/bind";
-import Styles from "./Button.module.scss";
 import { Link } from "react-router-dom";
+import Styles from "./Button.module.scss";
 const cx = classNames.bind(Styles);
 export default function Button({
   to,
   href,
   ref,
   primary = false,
+  offSetMenu = false,
   trailer = false,
   contact = false,
   primaryHeader = false,
@@ -47,6 +48,7 @@ export default function Button({
   const classes = cx("wrapper", {
     primary,
     primaryHeader,
+    offSetMenu,
     trailer,
     contact,
     outline,

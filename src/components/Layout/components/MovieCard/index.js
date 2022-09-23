@@ -2,15 +2,14 @@ import { useState } from "react";
 import Image from "../Image";
 import classNames from "classnames/bind";
 import styles from "./MovieCard.module.scss";
+import "./modal.scss";
 import { Col } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import moment from "moment/moment";
 import Badge from "react-bootstrap/Badge";
 import Button from "../Button";
-import "./modal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { faFilm } from "@fortawesome/free-solid-svg-icons";
 const cx = classNames.bind(styles);
 const getPosterURL = (poster_path) => {
   return `https://image.tmdb.org/t/p/w500/${poster_path}`;
@@ -33,12 +32,13 @@ export default function MovieCard({
   id,
 }) {
   const [show, setShow] = useState(false);
-
   const handleClose = () => {
     setShow(false);
     console.log("abc");
   };
-  const handleShow = () => setShow(true);
+  const handleShow = (breakpoint) => {
+    setShow(true);
+  };
 
   return (
     <>
@@ -60,11 +60,11 @@ export default function MovieCard({
         </h3>
         {topRate ? (
           <h3 className={cx("vote")}>
-            <a href="#">Vote average: {vote_average}</a>
+            <span>Vote average: {vote_average}</span>
           </h3>
         ) : (
           <h3 className={cx("date")}>
-            <a href="#">Popularity: {popularity}</a>
+            <span>Popularity: {popularity}</span>
           </h3>
         )}
       </Col>
@@ -79,6 +79,7 @@ export default function MovieCard({
         <Modal.Header
           className="p-0"
           // style={{ backgroundImage: `url(${getBackDropURL(backdrop_path)})` }}
+          closeButton
         >
           <Image className="w100" src={getBackDropURL(backdrop_path)}></Image>
           <div></div>
@@ -87,11 +88,11 @@ export default function MovieCard({
           <div className="title">
             <h1>{title || name}</h1>
             <Button
-              rightIcon={<FontAwesomeIcon icon={faPlay} />}
+              leftIcon={<FontAwesomeIcon icon={faFilm} />}
               trailer
               to={`./Detail/${id}`}
             >
-              Watch Trailer
+              Detail
             </Button>
           </div>
           <div className="d-flex align-center mb-3 justify-content-between ">

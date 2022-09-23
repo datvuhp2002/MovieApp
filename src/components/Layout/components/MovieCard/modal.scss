@@ -1,7 +1,13 @@
+@import "../../../Mixin/mixin.scss";
 .modalW{
-    border-radius: 25px;
-    width: calc(var(--bs-modal-width) + 250px )!important;
-    max-width: none!important;
+    @include desktop{
+        border-radius: 25px;
+        width: calc(var(--bs-modal-width) + 250px )!important;
+        max-width: none!important;
+    }
+    @include tablet{
+        border-radius: 25px;
+    }
     
 }
 .modal-content{
@@ -13,6 +19,13 @@
     flex-direction: row;
     position: relative;
     border: 0!important;
+    .btn-close{
+        position: absolute;
+        top: 4%;
+        right: 2.5%;
+        background-color: #fff;
+        border-radius: 999999px;
+    }
 }
 .modal-header div{
     background: linear-gradient(0deg,#181818,transparent 50%);
@@ -21,8 +34,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    
-    
 }
 .modal-body div h1{
     font-size: 3.5rem;

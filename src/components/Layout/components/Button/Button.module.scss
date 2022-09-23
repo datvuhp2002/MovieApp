@@ -25,7 +25,12 @@
         padding: 7px 16px;
     }
     &.trailer{
-        padding: 6px 8px;
+        padding: 5px 8px;
+    }
+    &.offSetMenu{
+        padding: 10px 30px 10px 7px;
+        justify-content: flex-start;
+
     }
     
 
@@ -50,12 +55,13 @@
     }
 }
 .trailer{
-    background-color: var(--primary);
-    color: var(--white);
-    border-color: var(--primary);
+    background-color: #fff;
+    color: var(--black)!important;
+    // color: var(--white);
+    // border-color: var(--white);
     &:hover{
-        border-color: var(--primary);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55
+        // background: 
+        background-color:#e6e6e6;
     }
 }
 .contact{
@@ -89,6 +95,18 @@
     color: var(--white);
     align-items: center;
     font-weight: 300;
+    
+    border: 0;
+    &:hover{
+        background-color: #102c48;
+        color: #428bca;
+    }
+}
+.offSetMenu{
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 300;
+    text-align: start;
     
     border: 0;
     &:hover{
