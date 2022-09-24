@@ -1,0 +1,31 @@
+.wrapper{
+    position: relative;
+    margin-top: -36rem!important;
+    z-index: 100;
+}
+
+.main{
+    h1{
+        font-size: 4.5rem;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+    }
+     
+    h2{
+        display: flex;
+        align-items: center;
+        color: #b5b5b5;
+        font-weight: 400;
+        line-height: 1.25;
+    }
+    .facts{
+        display: flex; 
+        
+        a+a{
+            margin-left: 10px;
+        }
+        .runTime{
+            margin-left: 10px;
+        }
+    }
+}

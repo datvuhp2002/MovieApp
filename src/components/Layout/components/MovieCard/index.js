@@ -30,6 +30,7 @@ export default function MovieCard({
   first_air_date,
   release_date,
   id,
+  media_type = "movie",
 }) {
   const [show, setShow] = useState(false);
   const handleClose = () => {
@@ -90,7 +91,7 @@ export default function MovieCard({
             <Button
               leftIcon={<FontAwesomeIcon icon={faFilm} />}
               trailer
-              to={`./Detail/${id}`}
+              to={`./Detail/${media_type}/${id}`}
             >
               Detail
             </Button>

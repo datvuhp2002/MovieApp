@@ -9,9 +9,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const cx = classNames.bind(styles);
 export default function Login(data, offset = false) {
-  {
-    offset ? console.log("yes") : console.log("no");
-  }
+  // {
+  //   offset ? console.log("yes") : console.log("no");
+  // }
   const [currentUser, setCurrentUSer] = useState(false);
   const handleLogOut = () => {
     setCurrentUSer(false);

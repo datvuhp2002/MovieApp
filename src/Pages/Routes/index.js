@@ -24,7 +24,7 @@ const publicRoutes = [
   { path: "/NewMovie", component: NewMovie, namePage: "New Movie" },
   { path: "/FAQ", component: FAQ, namePage: "FAQ" },
   { path: "/Login", component: Login },
-  { path: "/Detail/:idMovie", component: Detail },
+  { path: "/Detail/:mediaType/:idMovie", component: Detail },
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };
