@@ -11,21 +11,50 @@
         margin-bottom: 0.8rem;
     }
      
-    h2{
+    .tagLine{
         display: flex;
         align-items: center;
         color: #b5b5b5;
         font-weight: 400;
         line-height: 1.25;
+        margin-bottom: 2rem;
+    }
+    .runTime{
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        opacity: 0.9;
+    }
+    .information{
+        display: flex;
+        margin-bottom: 5rem;
     }
     .facts{
         display: flex; 
-        
+        justify-content: space-between  ;
         a+a{
             margin-left: 10px;
         }
-        .runTime{
-            margin-left: 10px;
+        .movieType{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button + button {
+                margin-left: 6px;
+            }
         }
+        
+        .icon{
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 2rem;
+                font-weight: 500;
+                margin-left: 8px;
+            }
+            svg{
+                font-size: 3.5rem
+            }
+        }
+
     }
 }

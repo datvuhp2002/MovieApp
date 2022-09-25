@@ -32,6 +32,9 @@
         justify-content: flex-start;
 
     }
+    &.btnType{
+        padding: 5px 15px;
+    }
     
 
 }
@@ -62,6 +65,19 @@
     &:hover{
         // background: 
         background-color:#e6e6e6;
+    }
+}
+.btnType{
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+    border-radius: 9999px;
+    span{
+        font-size: 0.75em;
+    }
+    &:hover{
+        background-color: #fff;
+        color: #485fc7;
     }
 }
 .contact{
