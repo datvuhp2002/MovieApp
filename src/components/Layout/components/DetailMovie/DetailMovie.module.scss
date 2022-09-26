@@ -10,7 +10,9 @@
         font-weight: 400;
         margin-bottom: 0.8rem;
     }
-     
+    h2{
+        text-transform: uppercase;
+    }
     .tagLine{
         display: flex;
         align-items: center;
@@ -21,12 +23,14 @@
     }
     .runTime{
         margin-bottom: 2rem;
-        font-size: 1.8rem;
         opacity: 0.9;
     }
     .information{
         display: flex;
-        margin-bottom: 5rem;
+        margin-bottom: 1rem;
+    }
+    .overview{
+        color: #b5b5b5!important;
     }
     .facts{
         display: flex; 
@@ -55,6 +59,12 @@
                 font-size: 3.5rem
             }
         }
+    }
+    .cast, .similarMovies{
+        // display: flex;
+        // overflow-x: auto;
+        margin-top: 2rem;
 
     }
+    
 }

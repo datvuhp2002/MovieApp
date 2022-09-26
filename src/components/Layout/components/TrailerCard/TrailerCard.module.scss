@@ -1,0 +1,15 @@
+.wrapper{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 2px 1.5em 0 2px;
+    font-size: 1.4rem;
+    .image{
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0 0 0 2px #cc7b19;
+        }
+    }
+
+}

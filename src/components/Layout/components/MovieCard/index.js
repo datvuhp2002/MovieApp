@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "../Image";
 import classNames from "classnames/bind";
 import styles from "./MovieCard.module.scss";
-import "./modal.scss";
+import "../../../GlobalStyles/modal.scss";
 import { Col } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import moment from "moment/moment";
@@ -40,35 +40,8 @@ export default function MovieCard({
   const handleShow = (breakpoint) => {
     setShow(true);
   };
-
-  return (
-    <>
-      <Col
-        xxl={2}
-        xl={2}
-        lg={3}
-        md={4}
-        sm={6}
-        xs={6}
-        className={cx("wrapper", "mb-5")}
-        onClick={handleShow}
-      >
-        <div className={cx("image")}>
-          <Image className="w100" src={getPosterURL(poster_path)}></Image>
-        </div>
-        <h3 className={cx("movie")}>
-          <a href="">{title || name}</a>
-        </h3>
-        {topRate ? (
-          <h3 className={cx("vote")}>
-            <span>Vote average: {vote_average}</span>
-          </h3>
-        ) : (
-          <h3 className={cx("date")}>
-            <span>Popularity: {popularity}</span>
-          </h3>
-        )}
-      </Col>
+  const showModal = () => {
+    return (
       <Modal
         show={show}
         onHide={handleClose}
@@ -112,6 +85,37 @@ export default function MovieCard({
           <p style={{ opacity: "0.7" }}>{overview}</p>
         </Modal.Body>
       </Modal>
+    );
+  };
+  return (
+    <>
+      <Col
+        xxl={2}
+        xl={2}
+        lg={3}
+        md={4}
+        sm={6}
+        xs={6}
+        className={cx("wrapper", "mb-5")}
+        onClick={handleShow}
+      >
+        <div className={cx("image")}>
+          <Image className="w100" src={getPosterURL(poster_path)}></Image>
+        </div>
+        <h3 claxssName={cx("movie")}>
+          <span href="">{title || name}</span>
+        </h3>
+        {topRate ? (
+          <h3 className={cx("vote")}>
+            <span>Vote average: {vote_average}</span>
+          </h3>
+        ) : (
+          <h3 className={cx("date")}>
+            <span>Popularity: {popularity}</span>
+          </h3>
+        )}
+      </Col>
+      {showModal()}
     </>
   );
 }

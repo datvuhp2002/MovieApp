@@ -1,4 +1,4 @@
-@import "../../../Mixin/mixin.scss";
+@import "../Mixin/mixin.scss";
 .modalW{
     @include desktop{
         border-radius: 25px;
@@ -9,6 +9,21 @@
         border-radius: 25px;
     }
     
+}
+.trailerWrapper{
+    width: 853px;
+    height: 480px;
+    max-height: calc(100vh - 160px);
+
+}
+.trailer{
+    width: 100%;
+    // height: 100%;
+    max-height: calc(100vh - 160px);
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+
 }
 .modal-content{
     border: 0!important;

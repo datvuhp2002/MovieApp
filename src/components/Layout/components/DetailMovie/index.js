@@ -8,15 +8,16 @@ import moment from "moment/moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { faImdb } from "@fortawesome/free-brands-svg-icons";
-import Slider from "react-slick";
+import SlickCast from "../Slick/SlickCast";
+import SlickTrailer from "../Slick/SlickTrailer";
+import CastsCard from "../CastsCard";
+import TrailerCard from "../TrailerCard";
 import MovieCard from "../MovieCard";
-
 const cx = classNames.bind(styles);
 export default function DetailMovie(data) {
   const dataMovie = data.data;
   const posterImg = `${Poster_W342}${dataMovie.poster_path}`;
   const getTime = (time) => {
-    console.log(time);
     let MovieTime = "";
     {
       time % 60 === 0
@@ -27,14 +28,13 @@ export default function DetailMovie(data) {
     }
     return MovieTime;
   };
-  console.log(dataMovie.runtime);
 
   return (
     <Row className={cx("wrapper")}>
       <Col xxl={3} className="px-5 py-3">
         {dataMovie.poster_path && <Image w100 src={posterImg} />}
       </Col>
-      <Col className={cx("main", "px-5 py-3")}>
+      <Col xxl={9} className={cx("main", "px-5 py-3")}>
         <h1>
           {dataMovie.title ||
             dataMovie.original_title ||
@@ -63,7 +63,8 @@ export default function DetailMovie(data) {
               </p>
             ))}
         </div>
-        <Row className={cx("facts")}>
+        <div className={cx("overview", "mb-5")}>{dataMovie.overview}</div>
+        <Row className={cx("facts", "mb-2")}>
           <Col className={cx("icon")}>
             <FontAwesomeIcon icon={faImdb} />
             <span>{dataMovie.vote_average}</span>
@@ -77,12 +78,35 @@ export default function DetailMovie(data) {
               ))}
           </Col>
         </Row>
-        <div className={cx("cast")}>
-          <h2>Cast</h2>
 
-          <Slider>
-            <Image className="w-100 h-100" src={posterImg} />
-          </Slider>
+        <div className={cx("cast", "mb-5")}>
+          <h2 className="mb-2">Cast</h2>
+          <SlickCast className="list-cast">
+            {dataMovie.credits &&
+              dataMovie.credits["cast"].map((item, index) => {
+                return <CastsCard key={index} {...item} />;
+              })}
+          </SlickCast>
+        </div>
+        <div className={cx("trailer")}>
+          <h2 className="mb-2">Trailer</h2>
+          <SlickTrailer className="list-cast">
+            {dataMovie.credits &&
+              dataMovie.videos["results"].map((item, index) => {
+                return (
+                  <TrailerCard key={index} VideoKey={item.key} {...item} />
+                );
+              })}
+          </SlickTrailer>
+        </div>
+        <div className={cx("similarMovies")}>
+          <h2 className="mb-2">SIMILAR MOVIES</h2>
+          <SlickTrailer className="list-cast">
+            {dataMovie.credits &&
+              dataMovie.videos["results"].map((item, index) => {
+                return <MovieCard key={index} VideoKey={item.key} {...item} />;
+              })}
+          </SlickTrailer>
         </div>
       </Col>
     </Row>
