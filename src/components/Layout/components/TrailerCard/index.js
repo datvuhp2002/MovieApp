@@ -5,11 +5,9 @@ import Image from "../Image";
 import { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import YouTube from "react-youtube";
 import "../../../GlobalStyles/modal.scss";
 import { useState } from "react";
 function MyVerticallyCenteredModal({ identify, keyURL, show, onHide }) {
-  console.log(keyURL);
   return (
     <Modal
       show={show}

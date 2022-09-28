@@ -3,10 +3,9 @@ import axios from "axios";
 
 export default function UseAxios(request) {
   const [Movie, setMovies] = useState([]);
-
   useEffect(() => {
     axios
-      .get(`${request}`)
+      .get(request)
       .then((res) => {
         setMovies(res.data.results);
       })

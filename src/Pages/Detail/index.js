@@ -5,12 +5,12 @@ import DefaultLayout from "../../components/Layout/DefaultLayout";
 import Body from "../../components/Layout/DefaultLayout/Body";
 import classNames from "classnames/bind";
 import styles from "./Detail.module.scss";
-import { Image, MovieCard } from "../../components/Layout/components";
-import { Poster, Poster_W500 } from "../../request";
+import { Poster } from "../../request";
 import DetailMovie from "../../components/Layout/components/DetailMovie";
+
 const cx = classNames.bind(styles);
 export default function Detail() {
-  let { mediaType, idMovie } = useParams();
+  const { mediaType, idMovie } = useParams();
   const data = GetDataID(mediaType, idMovie);
   const DropbackImage = `${Poster}${data.backdrop_path}`;
   return (

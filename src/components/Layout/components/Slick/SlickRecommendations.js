@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slick.scss";
 
-export default function SlickTrailer({ children }) {
+export default function SlickRecommendations({ children }) {
   const settings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
       {

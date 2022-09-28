@@ -10,6 +10,7 @@ import Badge from "react-bootstrap/Badge";
 import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 const cx = classNames.bind(styles);
 const getPosterURL = (poster_path) => {
   return `https://image.tmdb.org/t/p/w500/${poster_path}`;
@@ -32,6 +33,7 @@ export default function MovieCard({
   id,
   media_type = "movie",
 }) {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false);
@@ -39,6 +41,9 @@ export default function MovieCard({
   };
   const handleShow = (breakpoint) => {
     setShow(true);
+  };
+  const onMove = () => {
+    navigate(`/Detail/${media_type}/${id}`);
   };
   const showModal = () => {
     return (
@@ -50,12 +55,10 @@ export default function MovieCard({
         centered
         dialogClassName="modalW"
       >
-        <Modal.Header
-          className="p-0"
-          // style={{ backgroundImage: `url(${getBackDropURL(backdrop_path)})` }}
-          closeButton
-        >
-          <Image className="w100" src={getBackDropURL(backdrop_path)}></Image>
+        <Modal.Header className="p-0" closeButton>
+          {backdrop_path && (
+            <Image className="w100" src={getBackDropURL(backdrop_path)}></Image>
+          )}
           <div></div>
         </Modal.Header>
         <Modal.Body className="rounded-bottom py-4">
@@ -64,7 +67,7 @@ export default function MovieCard({
             <Button
               leftIcon={<FontAwesomeIcon icon={faFilm} />}
               trailer
-              to={`./Detail/${media_type}/${id}`}
+              onClick={onMove}
             >
               Detail
             </Button>
@@ -102,7 +105,7 @@ export default function MovieCard({
         <div className={cx("image")}>
           <Image className="w100" src={getPosterURL(poster_path)}></Image>
         </div>
-        <h3 claxssName={cx("movie")}>
+        <h3 className={cx("movie")}>
           <span href="">{title || name}</span>
         </h3>
         {topRate ? (

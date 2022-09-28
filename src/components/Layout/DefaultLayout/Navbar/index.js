@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Navbar as NavbarWeb } from "react-bootstrap";
 import classNames from "classnames/bind";
 import LogoApp from "../../../../asstes/images/LogoApp.png";
-import { Button, Image, Menu } from "../../components";
+import { Image } from "../../components";
 import {
   faArrowRightFromBracket,
   faBars,

@@ -13,9 +13,7 @@
     background: var(--white);
     cursor: pointer;
     border: 1.5px solid transparent;
-    + .wrapper{
-        // margin-left: 8px; 
-    }
+
     &.disabled{
         pointer-events: none;
         opacity: 0.5;
@@ -146,7 +144,6 @@
     background-color: var(--white);
     border-color: currentColor ;
     color: var(--primary);
-    min-width: 8.8rem;
     &:hover{
         border-color: currentColor ;
         background-color: rgba(254, 44, 85, 0.06);

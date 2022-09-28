@@ -10,9 +10,10 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { faImdb } from "@fortawesome/free-brands-svg-icons";
 import SlickCast from "../Slick/SlickCast";
 import SlickTrailer from "../Slick/SlickTrailer";
+import SlickRecommendations from "../Slick/SlickRecommendations";
 import CastsCard from "../CastsCard";
 import TrailerCard from "../TrailerCard";
-import MovieCard from "../MovieCard";
+import RecommendationsCard from "../RecommendationsCard";
 const cx = classNames.bind(styles);
 export default function DetailMovie(data) {
   const dataMovie = data.data;
@@ -54,60 +55,65 @@ export default function DetailMovie(data) {
           {(dataMovie.runtime && getTime(dataMovie.runtime)) ||
             (dataMovie.episode_run_time && getTime(dataMovie.episode_run_time))}
         </div>
-        <div className={cx("information")}>
-          <span className="me-2">Nation:</span>
-          {dataMovie.production_countries &&
-            dataMovie.production_countries.map((item, index) => (
+        {dataMovie.production_countries && (
+          <div className={cx("information")}>
+            <span className="me-2">Nation:</span>
+            {dataMovie.production_countries.map((item, index) => (
               <p className="me-4" key={index}>
                 {item.name}
               </p>
             ))}
-        </div>
+          </div>
+        )}
         <div className={cx("overview", "mb-5")}>{dataMovie.overview}</div>
         <Row className={cx("facts", "mb-2")}>
           <Col className={cx("icon")}>
             <FontAwesomeIcon icon={faImdb} />
             <span>{dataMovie.vote_average}</span>
           </Col>
-          <Col className={cx("movieType")}>
-            {dataMovie.genres &&
-              dataMovie.genres.map((item, index) => (
+          {dataMovie.genres && (
+            <Col className={cx("movieType")}>
+              {dataMovie.genres.map((item, index) => (
                 <Button btnType key={index}>
                   {item.name}
                 </Button>
               ))}
-          </Col>
+            </Col>
+          )}
         </Row>
 
-        <div className={cx("cast", "mb-5")}>
-          <h2 className="mb-2">Cast</h2>
-          <SlickCast className="list-cast">
-            {dataMovie.credits &&
-              dataMovie.credits["cast"].map((item, index) => {
+        {dataMovie.credits && (
+          <div className={cx("cast", "mb-5")}>
+            <h2 className="mb-2">Cast</h2>
+            <SlickCast className="list-cast">
+              {dataMovie.credits["cast"].map((item, index) => {
                 return <CastsCard key={index} {...item} />;
               })}
-          </SlickCast>
-        </div>
-        <div className={cx("trailer")}>
-          <h2 className="mb-2">Trailer</h2>
-          <SlickTrailer className="list-cast">
-            {dataMovie.credits &&
-              dataMovie.videos["results"].map((item, index) => {
+            </SlickCast>
+          </div>
+        )}
+        {dataMovie.videos && (
+          <div className={cx("trailer")}>
+            <h2 className="mb-2">Trailer</h2>
+            <SlickTrailer className="list-cast">
+              {dataMovie.videos["results"].map((item, index) => {
                 return (
                   <TrailerCard key={index} VideoKey={item.key} {...item} />
                 );
               })}
-          </SlickTrailer>
-        </div>
-        <div className={cx("similarMovies")}>
-          <h2 className="mb-2">SIMILAR MOVIES</h2>
-          <SlickTrailer className="list-cast">
-            {dataMovie.credits &&
-              dataMovie.videos["results"].map((item, index) => {
-                return <MovieCard key={index} VideoKey={item.key} {...item} />;
+            </SlickTrailer>
+          </div>
+        )}
+        {dataMovie.recommendations && (
+          <div className={cx("similarMovies")}>
+            <h2 className="mb-2">RECOMMENDATIONS</h2>
+            <SlickRecommendations className="list-cast">
+              {dataMovie.recommendations["results"].map((item, index) => {
+                return <RecommendationsCard key={index} {...item} />;
               })}
-          </SlickTrailer>
-        </div>
+            </SlickRecommendations>
+          </div>
+        )}
       </Col>
     </Row>
   );

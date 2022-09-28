@@ -31,4 +31,8 @@ const requests = {
   fetchWar: `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=10752`,
   fetchWestern: `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=37`,
 };
+export const ResultsSearch = (query) => {
+  return `${BASE_URL}/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`;
+};
 export default requests;
+// search https://api.themoviedb.org/3/search/multi?api_key=9195c13a37c697961a3f6920c92c27f0&language=en-US&page=1&include_adult=false
