@@ -13,7 +13,10 @@
     background: var(--white);
     cursor: pointer;
     border: 1.5px solid transparent;
+    &.LinkHeader{
+        border-radius: 0;
 
+    }
     &.disabled{
         pointer-events: none;
         opacity: 0.5;
@@ -45,6 +48,9 @@
         border-color: rgba(22, 24, 35, 0.2);
         background-color: rgba(22, 24, 35, 0.03);
     }
+}
+.active{
+
 }
 .primary{
     background-color: var(--primary);

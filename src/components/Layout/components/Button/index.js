@@ -1,10 +1,11 @@
 import React from "react";
 import classNames from "classnames/bind";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Styles from "./Button.module.scss";
 const cx = classNames.bind(Styles);
 export default function Button({
   to,
+  toActive,
   href,
   ref,
   primary = false,
@@ -21,6 +22,8 @@ export default function Button({
   text = false,
   small = false,
   large = false,
+  active = false,
+  LinkHeader = false,
   className,
   leftIcon,
   rightIcon,
@@ -41,6 +44,9 @@ export default function Button({
   if (to) {
     _props.to = to;
     Comp = Link;
+  } else if (toActive) {
+    _props.to = toActive;
+    Comp = NavLink;
   } else if (href) {
     _props.href = href;
     Comp = "a";
@@ -50,6 +56,7 @@ export default function Button({
     primary,
     primaryHeader,
     offSetMenu,
+    active,
     btnType,
     trailer,
     contact,
@@ -58,6 +65,7 @@ export default function Button({
     header,
     disabled,
     rounded,
+    LinkHeader,
     text,
     [className]: className,
     small,

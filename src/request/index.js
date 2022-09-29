@@ -11,6 +11,7 @@ const requests = {
   fetchTrending: `${BASE_URL}/trending/all/week?api_key=${API_KEY}&language=en-US`,
   fetchNetflixOriginals: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_networks=213`,
   fetchTopRated: `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+  fetchUpcomming: `${BASE_URL}/movie/upcoming?api_key=${API_KEY}&language=en-US`,
   fetchAction: `${BASE_URL}/discover/movi e?api_key=${API_KEY}&language=en-US&with_genres=28`,
   fetchAdventure: `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=12`,
   fetchAnimation: `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`,

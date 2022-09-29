@@ -11,7 +11,19 @@ export default function MenuItems() {
         {
           if (route.namePage) {
             return (
-              <Button header to={route.path} key={index} leftIcon={route.icon}>
+              <Button
+                header
+                toActive={route.path}
+                key={index}
+                leftIcon={route.icon}
+                style={({ isActive }) => {
+                  return {
+                    backgroundColor: isActive ? "#102c48" : "",
+                    color: isActive ? "#428bca" : "",
+                  };
+                }}
+                LinkHeader
+              >
                 {route.namePage}
               </Button>
             );

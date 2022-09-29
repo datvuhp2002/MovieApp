@@ -1,4 +1,3 @@
-// layout
 import FAQ from "../FAQ";
 import Search from "../Search";
 import Home from "../Home";
@@ -6,7 +5,6 @@ import HotMovie from "../HotMovie";
 import Movies from "../Movies";
 import NewMovie from "../NewMovie";
 import SeriesMovie from "../SeriesMovie";
-import Login from "../Login";
 import Detail from "../Detail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +21,6 @@ const publicRoutes = [
   { path: "/SeriesMovie", component: SeriesMovie, namePage: "Series Movie" },
   { path: "/NewMovie", component: NewMovie, namePage: "New Movie" },
   { path: "/FAQ", component: FAQ, namePage: "FAQ" },
-  { path: "/Login", component: Login },
   { path: "/Detail/:mediaType/:idMovie", component: Detail },
 ];
 const privateRoutes = [];

@@ -65,6 +65,62 @@
         //     // flex-direction: column;
         // }
 }
-.OffSetMenu{
+// responsive
+.overlay{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    animation: fadeIn linear 0.2s;
+    @include desktop{
+        display: none!important;
+    }
+}
+.wrapperOffSet{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    // height: 100%;
+    outline: 0;
+    z-index: 1200;
+    background-color: #0b1e30;
     display: none;
+    animation:linear;
+    @include desktop{
+        display: none!important;
+
+    }
+    .closeBtn{
+        background-color: transparent;
+        position: relative;
+        top: 0;
+        left: 0;
+        color: #fff;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 2rem;
+        // background-color: #0b1e30;
+    }
+    .Menu{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        z-index: 1200;
+        flex-direction: column;
+        // background-color: #0b1e30;
+    }
+    
+   
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

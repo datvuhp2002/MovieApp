@@ -15,12 +15,15 @@ import axios from "axios";
 const cx = classNames.bind(styles);
 export default function Search() {
   const [input, setInput] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState([1]);
   const navigate = useNavigate();
   const ref = useRef();
   const handleChangeInput = () => {
     let keywords = ref.current.value;
     setInput(keywords);
+    keywords.length > 0
+      ? navigate(`/search?keywords=${keywords}`)
+      : navigate(`/search`);
   };
   useEffect(() => {
     let result = ResultsSearch(input);
@@ -51,7 +54,11 @@ export default function Search() {
           />
         </div>
         <Row className="mt-5">
-          <ResultMovieList input={input} searchResults={searchResults} />
+          {searchResults.length > 0 ? (
+            <ResultMovieList input={input} searchResults={searchResults} />
+          ) : (
+            <h2>Không có kết quả tìm kiếm của {input}</h2>
+          )}
         </Row>
       </Body>
     </DefaultLayout>

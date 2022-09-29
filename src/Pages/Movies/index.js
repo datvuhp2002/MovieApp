@@ -4,7 +4,7 @@ import Body from "../../components/Layout/DefaultLayout/Body";
 export default function Movies() {
   return (
     <DefaultLayout>
-      <Body></Body>
+      <Body />
     </DefaultLayout>
   );
 }
