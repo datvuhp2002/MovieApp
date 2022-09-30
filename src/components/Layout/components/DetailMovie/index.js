@@ -29,7 +29,6 @@ export default function DetailMovie(data) {
     }
     return MovieTime;
   };
-
   return (
     <Row className={cx("wrapper")}>
       <Col xxl={3} className="px-5 py-3">
@@ -74,7 +73,11 @@ export default function DetailMovie(data) {
           {dataMovie.genres && (
             <Col className={cx("movieType")}>
               {dataMovie.genres.map((item, index) => (
-                <Button btnType key={index}>
+                <Button
+                  btnType
+                  key={index}
+                  to={`../genre/${dataMovie.media_type}/${item.id}/${item.name}`}
+                >
                   {item.name}
                 </Button>
               ))}

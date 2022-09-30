@@ -10,8 +10,9 @@ import DetailMovie from "../../components/Layout/components/DetailMovie";
 
 const cx = classNames.bind(styles);
 export default function Detail() {
-  const { mediaType, idMovie } = useParams();
+  let { mediaType, idMovie } = useParams();
   const data = GetDataID(mediaType, idMovie);
+  data["media_type"] = mediaType;
   const DropbackImage = `${Poster}${data.backdrop_path}`;
   return (
     <div className={cx("wrapper")}>
