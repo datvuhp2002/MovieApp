@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Button } from "../../components";
-import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./Footer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { fab, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { Col, Row } from "react-bootstrap";
 const cx = classNames.bind(styles);
 export default function Footer() {
   return (
@@ -45,38 +45,38 @@ export default function Footer() {
             phụ đề phim
           </li>
         </ul>
-        <div className={cx("contact")}>
-          {/* <a
-            rel="nofollow"
-            class="layout_social__2PR5b"
-            title="Liên hệ"
-            href="/contact"
-          ></a>
-          <a
-            href="https://fb.com/Xemphim.Original"
-            target="_blank"
-            class="layout_social__2PR5b"
-            title="Facebook Page"
-          ></a>
-          <a
-            href="https://t.me/xemphim_official"
-            target="_blank"
-            class="layout_social__2PR5b"
-            title="Telegram Channel"
-          ></a> */}
-          <Button contact href="mailto:datvuhp2002@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </Button>
-          <Button contact href="https://www.facebook.com/Xemphim.Original">
-            <FontAwesomeIcon
-              icon={(fab, faFacebookF)}
-              style={{ fontSize: "20px" }}
-            />
-          </Button>
-          <Button contact href="https://t.me/xemphim_official">
-            <FontAwesomeIcon icon={faPaperPlane} />
-          </Button>
-        </div>
+        <Row className={cx("contact")}>
+          <Col xxl={2} xl={2} lg={2} md={2} sm={3} xs={12}>
+            <Button
+              className="w-100 mb-4"
+              contact
+              href="mailto:datvuhp2002@gmail.com"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </Button>
+          </Col>
+          <Col xxl={2} xl={2} lg={2} md={2} sm={3} xs={12}>
+            <Button
+              className="w-100 mb-4"
+              contact
+              href="https://www.facebook.com/Xemphim.Original"
+            >
+              <FontAwesomeIcon
+                icon={(fab, faFacebookF)}
+                style={{ fontSize: "20px" }}
+              />
+            </Button>
+          </Col>
+          <Col xxl={2} xl={2} lg={2} md={2} sm={3} xs={12}>
+            <Button
+              className="w-100 mb-4"
+              contact
+              href="https://t.me/xemphim_official"
+            >
+              <FontAwesomeIcon icon={faPaperPlane} />
+            </Button>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );

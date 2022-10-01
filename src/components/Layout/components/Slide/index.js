@@ -15,7 +15,6 @@ function Slide() {
     setIndex(selectedIndex);
   };
   const Trending = UseAxios(requests.fetchUpcomming);
-  console.log(Trending);
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {Trending.map((item, index) => {
@@ -31,10 +30,10 @@ function Slide() {
                 <h1>{item.title || item.name}</h1>
                 <p>{item.overview}</p>
                 <Button
+                  className="mt-2"
                   leftIcon={<FontAwesomeIcon icon={faFilm} />}
                   to={`./Detail/${item.media_type || "movie"}/${item.id}`}
                   trailer
-                  className="mt-5"
                 >
                   Detail
                 </Button>

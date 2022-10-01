@@ -1,7 +1,7 @@
 import styles from "./DetailMovie.module.scss";
 import classNames from "classnames/bind";
 import Image from "../Image";
-import { Poster, Poster_W500, Poster_W342 } from "../../../../request";
+import { Poster_W342 } from "../../../../request";
 import { Row, Col } from "react-bootstrap";
 import Button from "../Button";
 import moment from "moment/moment";
@@ -31,10 +31,10 @@ export default function DetailMovie(data) {
   };
   return (
     <Row className={cx("wrapper")}>
-      <Col xxl={3} className="px-5 py-3">
+      <Col xxl={3} xl={3} lg={3} className="px-5 py-3">
         {dataMovie.poster_path && <Image w100 src={posterImg} />}
       </Col>
-      <Col xxl={9} className={cx("main", "px-5 py-3")}>
+      <Col xxl={9} xl={9} lg={9} className={cx("main", "px-5 py-3")}>
         <h1>
           {dataMovie.title ||
             dataMovie.original_title ||
@@ -49,11 +49,13 @@ export default function DetailMovie(data) {
             )
           </span>
         </h2>
+        {/* Run Time */}
         <div className={cx("runTime")}>
           <FontAwesomeIcon icon={faClock} className="me-2" />
           {(dataMovie.runtime && getTime(dataMovie.runtime)) ||
             (dataMovie.episode_run_time && getTime(dataMovie.episode_run_time))}
         </div>
+        {/* information */}
         {dataMovie.production_countries && (
           <div className={cx("information")}>
             <span className="me-2">Nation:</span>
@@ -70,6 +72,7 @@ export default function DetailMovie(data) {
             <FontAwesomeIcon icon={faImdb} />
             <span>{dataMovie.vote_average}</span>
           </Col>
+          {/* movieType */}
           {dataMovie.genres && (
             <Col className={cx("movieType")}>
               {dataMovie.genres.map((item, index) => (
@@ -84,7 +87,7 @@ export default function DetailMovie(data) {
             </Col>
           )}
         </Row>
-
+        {/* cast */}
         {dataMovie.credits && (
           <div className={cx("cast", "mb-5")}>
             <h2 className="mb-2">Cast</h2>
@@ -95,6 +98,7 @@ export default function DetailMovie(data) {
             </SlickCast>
           </div>
         )}
+        {/* trailer */}
         {dataMovie.videos && (
           <div className={cx("trailer")}>
             <h2 className="mb-2">Trailer</h2>
@@ -107,6 +111,7 @@ export default function DetailMovie(data) {
             </SlickTrailer>
           </div>
         )}
+        {/* recommendations */}
         {dataMovie.recommendations && (
           <div className={cx("similarMovies")}>
             <h2 className="mb-2">RECOMMENDATIONS</h2>

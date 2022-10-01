@@ -6,7 +6,9 @@ import { useRef, useState } from "react";
 import Movie from "../../Movies/Movie";
 import { useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { requestMoviesType } from "../../../../request";
+import ReactPaginate from "react-paginate";
 const cx = classNames.bind(styles);
 export default function TypeOfMovie() {
   let Data = {
@@ -35,9 +37,11 @@ export default function TypeOfMovie() {
       { value: "37", title: "Western" },
     ],
   };
+  let navigate = useNavigate();
   let [FilmType, setFilmType] = useState("movie");
   let [Category, setCategory] = useState("16");
   let [data, setData] = useState([]);
+  let [currentPage, setCurrentPage] = useState("1");
   let sectionFilmType = useRef();
   let sectionCategory = useRef();
   const handleChangeCategory = () => {
@@ -45,9 +49,19 @@ export default function TypeOfMovie() {
   };
   const handleChangeFilmType = () => {
     setFilmType(sectionFilmType.current.value);
+    setCurrentPage("1");
+    navigate(`/Movies?page=1`);
   };
-  let result = requestMoviesType(FilmType, Category);
+  let result = requestMoviesType(FilmType, Category, currentPage);
+
+  const handlePageClick = (event) => {
+    setCurrentPage(event.selected + 1);
+    navigate(`/Movies?page=${event.selected + 1}`);
+  };
+  // useEffect(() => {
+  // }, [FilmType, Category, currentPage]);
   useEffect(() => {
+    result = requestMoviesType(FilmType, Category, currentPage);
     axios
       .get(result)
       .then((res) => {
@@ -56,8 +70,7 @@ export default function TypeOfMovie() {
       .catch((err) => {
         console.log(err);
       });
-  }, [data]);
-
+  }, [data, currentPage]);
   return (
     <>
       <Row className={cx("wrapper")}>
@@ -123,6 +136,25 @@ export default function TypeOfMovie() {
       <Row>
         <Movie data={data} />
       </Row>
+      {data.length != 0 && (
+        <ReactPaginate
+          previousLabel={"previous"}
+          breakLabel="..."
+          nextLabel="next >"
+          onPageChange={handlePageClick}
+          pageCount={50}
+          marginPagesDisplayed={3}
+          pageRangeDisplayed={3}
+          containerClassName={"pagination-lg pagination flex-wrap"}
+          pageClassName={"page-item"}
+          pageLinkClassName={"page-link"}
+          previousClassName={"page-item"}
+          previousLinkClassName={"page-link"}
+          nextClassName={"page-item"}
+          nextLinkClassName={"page-link"}
+          breakLinkClassName={"page-link"}
+        />
+      )}
     </>
   );
 }

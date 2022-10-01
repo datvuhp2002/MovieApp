@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import GetDataID from "../../request/GetDataID";
 import DefaultLayout from "../../components/Layout/DefaultLayout";
@@ -7,7 +7,6 @@ import classNames from "classnames/bind";
 import styles from "./Detail.module.scss";
 import { Poster } from "../../request";
 import DetailMovie from "../../components/Layout/components/DetailMovie";
-
 const cx = classNames.bind(styles);
 export default function Detail() {
   let { mediaType, idMovie } = useParams();

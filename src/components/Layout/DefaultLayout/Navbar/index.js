@@ -19,7 +19,6 @@ export default function Navbar(props) {
   let [showOffSet, setShowOffSet] = useState(false);
   const handleShowMenuOffSet = () => {
     setShowOffSet(true);
-    console.log(111);
   };
   const handleCloseMenuOffSet = () => {
     setShowOffSet(false);

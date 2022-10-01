@@ -1,10 +1,8 @@
 import React from "react";
 import { useRef, useState } from "react";
-import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import DefaultLayout from "../../components/Layout/DefaultLayout";
 import Body from "../../components/Layout/DefaultLayout/Body";
-import GetDataID from "../../request/GetDataID";
 import classNames from "classnames/bind";
 import styles from "./Search.module.scss";
 import { Row } from "react-bootstrap";

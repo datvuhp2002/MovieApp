@@ -20,7 +20,9 @@ export default function TopMovie(time) {
   return (
     <>
       {TopMovie.map((item, index) => {
-        return <MovieCard key={index} {...item} />;
+        if (index < 18) {
+          return <MovieCard key={index} {...item} />;
+        }
       })}
     </>
   );
