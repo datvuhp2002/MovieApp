@@ -32,7 +32,7 @@ function Slide() {
                 <Button
                   className="mt-2"
                   leftIcon={<FontAwesomeIcon icon={faFilm} />}
-                  to={`./Detail/${item.media_type || "movie"}/${item.id}`}
+                  to={`/Detail/${item.media_type || "movie"}/${item.id}`}
                   trailer
                 >
                   Detail
