@@ -11,17 +11,17 @@ import Genre from "../Genre";
 const publicRoutes = [
   { path: "/MovieApp", component: Home },
   {
-    path: "/Search",
+    path: "/MovieApp/Search",
     component: Search,
     namePage: "Search",
     icon: <FontAwesomeIcon icon={faMagnifyingGlass} />,
   },
-  { path: "/HotMovie", component: HotMovie, namePage: "Hot Movie" },
-  { path: "/Movies", component: Movies, namePage: "Movies" },
-  { path: "/NewMovie", component: NewMovie, namePage: "New Movie" },
-  { path: "/FAQ", component: FAQ, namePage: "FAQ" },
-  { path: "/Detail/:mediaType/:idMovie", component: Detail },
-  { path: "/genre/:type/:genre/:name", component: Genre },
+  { path: "/MovieApp/HotMovie", component: HotMovie, namePage: "Hot Movie" },
+  { path: "/MovieApp/Movies", component: Movies, namePage: "Movies" },
+  { path: "/MovieApp/NewMovie", component: NewMovie, namePage: "New Movie" },
+  { path: "/MovieApp/FAQ", component: FAQ, namePage: "FAQ" },
+  { path: "/MovieApp/Detail/:mediaType/:idMovie", component: Detail },
+  { path: "/MovieApp/genre/:type/:genre/:name", component: Genre },
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };
