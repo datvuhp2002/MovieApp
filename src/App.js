@@ -1,7 +1,6 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./Pages/Routes";
-import Home from "./Pages/Home";
 function App() {
   return (
     <Router>

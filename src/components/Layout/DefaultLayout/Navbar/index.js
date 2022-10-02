@@ -34,7 +34,7 @@ export default function Navbar(props) {
             : { backgroundColor: "rgba(51,10,103,.93)" }
         }
       >
-        <Link to="/#">
+        <Link to="/MovieApp">
           <Image src={LogoApp} className={cx("logo")}></Image>
         </Link>
         <div className={cx("Menu", "mx-3")}>
