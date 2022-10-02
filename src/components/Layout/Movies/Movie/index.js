@@ -1,8 +1,5 @@
 import React from "react";
-import styles from "../global.module.scss";
-import classNames from "classnames/bind";
 import { MovieCard } from "../../components";
-const cx = classNames.bind(styles);
 
 export default function Movie(data) {
   return (

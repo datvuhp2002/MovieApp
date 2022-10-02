@@ -136,7 +136,7 @@ export default function TypeOfMovie() {
       <Row>
         <Movie data={data} />
       </Row>
-      {data.length != 0 && (
+      {data.length !== 0 && (
         <ReactPaginate
           previousLabel={"previous"}
           breakLabel="..."

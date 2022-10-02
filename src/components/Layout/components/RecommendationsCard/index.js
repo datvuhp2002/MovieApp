@@ -2,12 +2,6 @@ import { useState, useCallback, useEffect } from "react";
 import Image from "../Image";
 import classNames from "classnames/bind";
 import styles from "./RecommendationsCard.module.scss";
-import Modal from "react-bootstrap/Modal";
-import moment from "moment/moment";
-import Badge from "react-bootstrap/Badge";
-import Button from "../Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 const cx = classNames.bind(styles);
 const getPosterURL = (poster_path) => {
