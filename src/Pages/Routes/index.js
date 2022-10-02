@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Genre from "../Genre";
 const publicRoutes = [
-  { path: "/", component: Home },
+  { path: "/MovieApp", component: Home },
   {
     path: "/Search",
     component: Search,

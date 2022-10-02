@@ -2,10 +2,11 @@
   "name": "xemphim",
   "version": "0.1.0",
   "private": true,
+ "homepage": "https://datvuhp2002.github.io/MovieApp/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",  
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -13,6 +14,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
     "classnames": "^2.3.1",
+    "gh-pages": "^4.0.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
@@ -30,7 +32,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
