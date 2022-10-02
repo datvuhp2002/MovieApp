@@ -29,6 +29,10 @@
         }
         h1{
             font-size: 64px;
+            max-height: 71%;
+            overflow: hidden;
+            // max-width: 500px;
+            text-overflow: ellipsis;
         }
         max-width: 500px;
         
@@ -39,6 +43,8 @@
             h1{
                 white-space: nowrap;
                 font-size: 30px;
+                max-width: 250px;
+
             }
             p{
                 display: none
