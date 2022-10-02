@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./Pages/Routes";
 function App() {
   return (
-    <Router basename="/MovieApp" forceRefresh={true}>
+    <Router>
       <div className="App">
         <Routes>
           {publicRoutes.map((route, index) => {
