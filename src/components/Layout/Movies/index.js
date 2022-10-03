@@ -5,7 +5,7 @@ import Trending from "./Trending";
 import TopRated from "./TopRated";
 export default function Movies() {
   return (
-    <Row>
+    <Row style={{ marginTop: "-4.5rem" }}>
       <Trending />
       <NetflixOriginals />
       <TopRated />
