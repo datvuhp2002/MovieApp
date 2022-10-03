@@ -26,6 +26,7 @@
         h1,p{
             text-align: start;
             text-shadow: 2px 2px black;
+            max-height: 58%;
         }
         h1{
             font-size: 64px;
@@ -38,7 +39,7 @@
         
         @include mobile{
             left: 2rem;
-            top: 25%!important;
+            top: 23%!important;
             bottom: 25%!important;
             h1{
                 white-space: nowrap;

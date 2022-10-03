@@ -64,6 +64,7 @@
 .trailer{
     background-color: #fff;
     color: var(--black)!important;
+    z-index: 999;
     // color: var(--white);
     // border-color: var(--white);
     &:hover{

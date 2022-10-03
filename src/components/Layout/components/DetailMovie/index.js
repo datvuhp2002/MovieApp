@@ -99,7 +99,7 @@ export default function DetailMovie(data) {
           </div>
         )}
         {/* trailer */}
-        {dataMovie.videos && (
+        {dataMovie.videos != 0 && (
           <div className={cx("trailer")}>
             <h2 className="mb-2">Trailer</h2>
             <SlickTrailer className="list-cast">
@@ -112,7 +112,7 @@ export default function DetailMovie(data) {
           </div>
         )}
         {/* recommendations */}
-        {dataMovie.recommendations && (
+        {dataMovie.recommendations != 0 && (
           <div className={cx("similarMovies")}>
             <h2 className="mb-2">RECOMMENDATIONS</h2>
             <SlickRecommendations className="list-cast">
