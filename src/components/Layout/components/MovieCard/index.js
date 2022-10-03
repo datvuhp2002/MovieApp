@@ -37,7 +37,6 @@ export default function MovieCard({
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false);
-    console.log("abc");
   };
   const handleShow = (breakpoint) => {
     setShow(true);
