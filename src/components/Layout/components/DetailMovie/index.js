@@ -99,9 +99,11 @@ export default function DetailMovie(data) {
           </div>
         )}
         {/* trailer */}
-        {dataMovie.videos != 0 && (
+        {dataMovie.videos && (
           <div className={cx("trailer")}>
-            <h2 className="mb-2">Trailer</h2>
+            {dataMovie.videos["results"] != 0 && (
+              <h2 className="mb-2">Trailer</h2>
+            )}
             <SlickTrailer className="list-cast">
               {dataMovie.videos["results"].map((item, index) => {
                 return (
@@ -112,9 +114,11 @@ export default function DetailMovie(data) {
           </div>
         )}
         {/* recommendations */}
-        {dataMovie.recommendations != 0 && (
+        {dataMovie.recommendations && (
           <div className={cx("similarMovies")}>
-            <h2 className="mb-2">RECOMMENDATIONS</h2>
+            {dataMovie.recommendations["results"] != 0 && (
+              <h2 className="mb-2">RECOMMENDATIONS</h2>
+            )}
             <SlickRecommendations className="list-cast">
               {dataMovie.recommendations["results"].map((item, index) => {
                 return <RecommendationsCard key={index} {...item} />;

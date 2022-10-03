@@ -10,7 +10,7 @@ export default function Trending() {
   return (
     <>
       <h2 className={cx("title")}>
-        <span>Treding</span>
+        <span className="fw-bold">Treding</span>
       </h2>
       {Trending.map((item, index) => {
         if (index < 6) {

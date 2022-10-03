@@ -10,7 +10,7 @@ export default function NetflixOriginals() {
   return (
     <>
       <h2 className={cx("title")}>
-        <span>Netflix Originals</span>
+        <span className="fw-bold">Netflix Originals</span>
       </h2>
       {NetflixOriginals.map((item, index) => {
         if (index < 12) return <MovieCard key={index} {...item} />;
