@@ -35,7 +35,7 @@
             // max-width: 500px;
             text-overflow: ellipsis;
         }
-        max-width: 500px;
+        max-width: 550px;
         
         @include mobile{
             left: 2rem;
@@ -45,6 +45,7 @@
                 white-space: nowrap;
                 font-size: 30px;
                 max-width: 250px;
+                max-height: 60%;
 
             }
             p{
