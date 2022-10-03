@@ -23,6 +23,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        max-width: 550px;
         h1,p{
             text-align: start;
             text-shadow: 2px 2px black;
@@ -35,7 +36,6 @@
             // max-width: 500px;
             text-overflow: ellipsis;
         }
-        max-width: 550px;
         
         @include mobile{
             left: 2rem;
