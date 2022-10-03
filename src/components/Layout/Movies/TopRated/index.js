@@ -9,8 +9,8 @@ export default function TopRated() {
   const top_rated = UseAxios(requests.fetchTopRated);
   return (
     <>
-      <h2 className={cx("title fw-bold")}>
-        <span>Top Rated</span>
+      <h2 className={cx("title")}>
+        <span className="fw-bold">Top Rated</span>
       </h2>
       {top_rated.map((item, index) => {
         if (index < 12) return <MovieCard topRate key={index} {...item} />;
