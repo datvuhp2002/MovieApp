@@ -35,6 +35,9 @@
     .facts{
         display: flex; 
         justify-content: space-between  ;
+        div + div {
+            margin-top: 1.5rem;
+        }
         a+a{
             margin-left: 10px;
         }
@@ -60,11 +63,11 @@
             }
         }
     }
+    .trailer {
+        margin-top: -2.5rem;
+    }
     .cast, .similarMovies{
-        // display: flex;
-        // overflow-x: auto;
         margin-top: 2rem;
-        
     }
     
 }

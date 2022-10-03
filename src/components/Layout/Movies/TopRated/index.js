@@ -9,7 +9,7 @@ export default function TopRated() {
   const top_rated = UseAxios(requests.fetchTopRated);
   return (
     <>
-      <h2 className={cx("title")}>
+      <h2 className={cx("title fw-bold")}>
         <span>Top Rated</span>
       </h2>
       {top_rated.map((item, index) => {

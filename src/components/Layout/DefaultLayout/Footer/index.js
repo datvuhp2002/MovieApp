@@ -13,36 +13,37 @@ export default function Footer() {
     <footer className={cx("wrapper")}>
       <Container fuild="md">
         <h3 className={cx("title")}>
-          Phim chất lượng cao online của <a href="/">XemPhim</a> khác gì so với
-          các trang phim khác?
+          How is Movie With Me online high-quality <a href="/MovieApp">movie</a>{" "}
+          different from other movie sites?
         </h3>
         <ul className={cx("list")}>
           <li>
-            Là phim bluray (reencoded), có độ phân giải thấp nhất là Full HD
-            (1080p), trong khi hầu hết các trang phim khác chỉ có tới độ phân
-            giải HD (720p) là cao nhất
+            As a bluray (reencoded) movie, the lowest resolution is Full HD
+            (1080p), while most other movie sites only have up to HD resolution
+            (720p) is the highest.
           </li>
           <li>
-            Chất lượng cao, lượng dữ liệu trên giây (bitrate) gấp từ 5 - 10 lần
-            phim online thông thường - đây là yếu tố quyết định độ nét của phim
-            (thậm chí còn quan trọng hơn độ phân giải)
+            High quality, the amount of data per second (bitrate) is 5 - 10
+            times higher than regular online movies - this is the determining
+            factor of the sharpness of the movie (even more important than the
+            resolution)
           </li>
           <li>
-            Âm thanh 5.1 (6 channel) thay vì stereo (2 channel) như các trang
-            phim khác (kể cả Youtube)
+            5.1 sound (6 channels) instead of stereo (2 channels) like other
+            movie sites (including Youtube)
           </li>
           <li>
-            Phù hợp để xem trên màn hình TV, máy tính, laptop có độ phân giải
-            cao
+            Suitable for viewing on high resolution TV, computer, and laptop
+            screens
           </li>
           <li>
-            Nếu không hài lòng với phụ đề có sẵn, bạn có thể tự upload phụ đề
-            của riêng mình để xem online
+            If you are not satisfied with the available subtitles, you can
+            upload your own subtitles to watch online
           </li>
           <li>
-            Có lựa chọn hiện phụ đề song ngữ (tức hiện đồng thời cả tiếng Anh
-            &amp; tiếng Việt), phù hợp với những người muốn học tiếng Anh qua
-            phụ đề phim
+            There is an option to display bilingual subtitles (both English and
+            Vietnamese are displayed at the same time), suitable for those who
+            want to learn English through movie subtitles
           </li>
         </ul>
         <Row className={cx("contact")}>

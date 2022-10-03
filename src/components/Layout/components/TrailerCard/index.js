@@ -2,11 +2,8 @@ import React from "react";
 import styles from "./TrailerCard.module.scss";
 import classNames from "classnames/bind";
 import Image from "../Image";
-import { useEffect } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../../../GlobalStyles/modal.scss";
-import { useState } from "react";
 function MyVerticallyCenteredModal({ identify, keyURL, show, onHide }) {
   return (
     <Modal

@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "../Image";
 import classNames from "classnames/bind";
 import styles from "./RecommendationsCard.module.scss";
