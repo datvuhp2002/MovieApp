@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./Pages/Routes";
 function App() {
   return (
-    <Router>
+    <Router basename="/MovieApp">
       <div className="App">
         <Routes>
           {publicRoutes.map((route, index) => {
