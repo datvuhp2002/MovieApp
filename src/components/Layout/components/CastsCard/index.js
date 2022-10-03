@@ -11,7 +11,9 @@ export default function CastsCard({ profile_path, name, character }) {
     <div className={cx("wrapper")}>
       <div className={cx("image")}>
         <figure>
-          <Image w100 src={getBackDropURL(profile_path)}></Image>
+          {profile_path && (
+            <Image w100 src={getBackDropURL(profile_path)}></Image>
+          )}
         </figure>
       </div>
 
