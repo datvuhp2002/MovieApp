@@ -30,7 +30,7 @@ function Slide() {
                 <h1>{item.title || item.name}</h1>
                 <p>{item.overview}</p>
                 <Button
-                  className="mt-2"
+                  className="mt-4"
                   leftIcon={<FontAwesomeIcon icon={faFilm} />}
                   to={`/Detail/${item.media_type || "movie"}/${item.id}`}
                   trailer

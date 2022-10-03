@@ -90,7 +90,7 @@ export default function DetailMovie(data) {
         {/* cast */}
         {dataMovie.credits && (
           <div className={cx("cast", "mb-5")}>
-            <h2 className="mb-2">Cast</h2>
+            {dataMovie.credits["cast"] != 0 && <h2 className="mb-2">Cast</h2>}
             <SlickCast className="list-cast">
               {dataMovie.credits["cast"].map((item, index) => {
                 return <CastsCard key={index} {...item} />;
