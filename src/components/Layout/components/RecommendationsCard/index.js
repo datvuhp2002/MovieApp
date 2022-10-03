@@ -18,13 +18,6 @@ export default function RecommendationsCard({
   id,
   media_type = "movie",
 }) {
-  const UseForceUpdate = () => {
-    const [, setTick] = useState(0);
-    const update = useCallback(() => {
-      setTick((tick) => tick + 1);
-    }, []);
-    return update;
-  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -37,7 +30,9 @@ export default function RecommendationsCard({
     <div className={cx("wrapper")}>
       <div onClick={onMoveToDetail}>
         <div className={cx("image")}>
-          <Image className="w100" src={getPosterURL(poster_path)}></Image>
+          {poster_path && (
+            <Image className="w100" src={getPosterURL(poster_path)}></Image>
+          )}
         </div>
         <h3 className={cx("movie")}>
           <span>{title || name}</span>
