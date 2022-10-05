@@ -12,20 +12,19 @@ import ReactPaginate from "react-paginate";
 import { useLocation } from "react-router-dom";
 export default function Genre() {
   const { type, genre, name } = useParams();
+  const movie_type = type;
   const navigate = useNavigate();
   let location = useLocation();
-  console.log(location);
   let [data, SetData] = useState([]);
   let [currentPage, setCurrentPage] = useState("1");
   let result = requestMoviesType(type, genre, currentPage);
-
   const handlePageClick = (event) => {
     setCurrentPage(event.selected + 1);
     navigate(`${location.pathname}?page=${event.selected + 1}`);
   };
+
   useEffect(() => {
     result = requestMoviesType(type, genre, currentPage);
-
     axios
       .get(result)
       .then((res) => {
@@ -40,7 +39,7 @@ export default function Genre() {
       <Body>
         <h1 className="fs-1 mb-5">{name} Movies</h1>
         <Row>
-          <GenreItemList data={data} />
+          <GenreItemList data={data} movie_type={`${movie_type}`} />
         </Row>
         <ReactPaginate
           previousLabel="previous"

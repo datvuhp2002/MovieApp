@@ -67,6 +67,7 @@ export default function DetailMovie(data) {
           </div>
         )}
         <div className={cx("overview", "mb-5")}>{dataMovie.overview}</div>
+        {/* movie type */}
         <Row className={cx("facts", "mb-2")}>
           <Col className={cx("icon")}>
             <FontAwesomeIcon icon={faImdb} />

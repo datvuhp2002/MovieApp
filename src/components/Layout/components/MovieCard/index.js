@@ -32,6 +32,7 @@ export default function MovieCard({
   release_date,
   id,
   media_type = "movie",
+  type,
 }) {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
@@ -42,7 +43,7 @@ export default function MovieCard({
     setShow(true);
   };
   const onMove = () => {
-    navigate(`/Detail/${media_type}/${id}`);
+    navigate(`/Detail/${type || media_type}/${id}`);
   };
   const showModal = () => {
     return (

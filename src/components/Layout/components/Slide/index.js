@@ -5,7 +5,6 @@ import requests from "../../../../request";
 import { Poster } from "../../../../request";
 import Button from "../Button";
 import "./slide.scss";
-import { useEffect } from "react";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Slide() {

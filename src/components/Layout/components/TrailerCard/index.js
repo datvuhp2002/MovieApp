@@ -21,14 +21,12 @@ function MyVerticallyCenteredModal({ identify, keyURL, show, onHide }) {
           height="480px"
           src={`https://www.youtube.com/embed/${keyURL}?autoplay=1`}
         ></iframe>
-        {/* <YouTube key={keyURL} id={identify} /> */}
       </Modal.Header>
     </Modal>
   );
 }
 const cx = classNames.bind(styles);
 export default function TrailerCard({ VideoKey, id }) {
-  const urlVideo = `https://www.youtube.com/watch?v=${VideoKey}`;
   const getImgVideo = (key) => {
     return `https://img.youtube.com/vi/${key}/mqdefault.jpg`;
   };
